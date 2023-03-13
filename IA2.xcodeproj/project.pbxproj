@@ -14,6 +14,15 @@
 		A95ECD9529BED82500EC2F35 /* IA2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95ECD9429BED82500EC2F35 /* IA2Tests.swift */; };
 		A95ECD9F29BED82500EC2F35 /* IA2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95ECD9E29BED82500EC2F35 /* IA2UITests.swift */; };
 		A95ECDA129BED82500EC2F35 /* IA2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95ECDA029BED82500EC2F35 /* IA2UITestsLaunchTests.swift */; };
+		A95ECDB029BED85600EC2F35 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95ECDAF29BED85600EC2F35 /* Worker.swift */; };
+		A95ECDB229BED86E00EC2F35 /* Workers.csv in Resources */ = {isa = PBXBuildFile; fileRef = A95ECDB129BED86E00EC2F35 /* Workers.csv */; };
+		A95ECDB429BED87300EC2F35 /* PayRates.csv in Resources */ = {isa = PBXBuildFile; fileRef = A95ECDB329BED87300EC2F35 /* PayRates.csv */; };
+		A95ECDB629BED89F00EC2F35 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95ECDB529BED89F00EC2F35 /* DataModel.swift */; };
+		A95ECDB829BED8E300EC2F35 /* CSV Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95ECDB729BED8E300EC2F35 /* CSV Functions.swift */; };
+		A95ECDBA29BEDDE400EC2F35 /* PayRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95ECDB929BEDDE400EC2F35 /* PayRate.swift */; };
+		A95ECDBC29BEE43800EC2F35 /* RosterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95ECDBB29BEE43800EC2F35 /* RosterListView.swift */; };
+		A9D6C5A429BEE7A700B62F33 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D6C5A329BEE7A700B62F33 /* Shift.swift */; };
+		A9D6C5A629BEE94100B62F33 /* AddShiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D6C5A529BEE94100B62F33 /* AddShiftView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,15 @@
 		A95ECD9A29BED82500EC2F35 /* IA2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IA2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95ECD9E29BED82500EC2F35 /* IA2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IA2UITests.swift; sourceTree = "<group>"; };
 		A95ECDA029BED82500EC2F35 /* IA2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IA2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A95ECDAF29BED85600EC2F35 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		A95ECDB129BED86E00EC2F35 /* Workers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Workers.csv; sourceTree = "<group>"; };
+		A95ECDB329BED87300EC2F35 /* PayRates.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PayRates.csv; sourceTree = "<group>"; };
+		A95ECDB529BED89F00EC2F35 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		A95ECDB729BED8E300EC2F35 /* CSV Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSV Functions.swift"; sourceTree = "<group>"; };
+		A95ECDB929BEDDE400EC2F35 /* PayRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayRate.swift; sourceTree = "<group>"; };
+		A95ECDBB29BEE43800EC2F35 /* RosterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterListView.swift; sourceTree = "<group>"; };
+		A9D6C5A329BEE7A700B62F33 /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
+		A9D6C5A529BEE94100B62F33 /* AddShiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShiftView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				A95ECD8329BED82500EC2F35 /* IA2App.swift */,
-				A95ECD8529BED82500EC2F35 /* ContentView.swift */,
+				A95ECDAE29BED84E00EC2F35 /* MODELS */,
+				A95ECDAD29BED84900EC2F35 /* VIEWS */,
 				A95ECD8729BED82500EC2F35 /* Assets.xcassets */,
 				A95ECD8929BED82500EC2F35 /* Preview Content */,
 			);
@@ -125,6 +144,30 @@
 				A95ECDA029BED82500EC2F35 /* IA2UITestsLaunchTests.swift */,
 			);
 			path = IA2UITests;
+			sourceTree = "<group>";
+		};
+		A95ECDAD29BED84900EC2F35 /* VIEWS */ = {
+			isa = PBXGroup;
+			children = (
+				A95ECD8529BED82500EC2F35 /* ContentView.swift */,
+				A95ECDBB29BEE43800EC2F35 /* RosterListView.swift */,
+				A9D6C5A529BEE94100B62F33 /* AddShiftView.swift */,
+			);
+			path = VIEWS;
+			sourceTree = "<group>";
+		};
+		A95ECDAE29BED84E00EC2F35 /* MODELS */ = {
+			isa = PBXGroup;
+			children = (
+				A95ECDB129BED86E00EC2F35 /* Workers.csv */,
+				A95ECDB329BED87300EC2F35 /* PayRates.csv */,
+				A95ECDAF29BED85600EC2F35 /* Worker.swift */,
+				A95ECDB929BEDDE400EC2F35 /* PayRate.swift */,
+				A9D6C5A329BEE7A700B62F33 /* Shift.swift */,
+				A95ECDB729BED8E300EC2F35 /* CSV Functions.swift */,
+				A95ECDB529BED89F00EC2F35 /* DataModel.swift */,
+			);
+			path = MODELS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +274,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A95ECDB229BED86E00EC2F35 /* Workers.csv in Resources */,
 				A95ECD8B29BED82500EC2F35 /* Preview Assets.xcassets in Resources */,
 				A95ECD8829BED82500EC2F35 /* Assets.xcassets in Resources */,
+				A95ECDB429BED87300EC2F35 /* PayRates.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +303,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A95ECD8629BED82500EC2F35 /* ContentView.swift in Sources */,
+				A9D6C5A429BEE7A700B62F33 /* Shift.swift in Sources */,
+				A9D6C5A629BEE94100B62F33 /* AddShiftView.swift in Sources */,
+				A95ECDB629BED89F00EC2F35 /* DataModel.swift in Sources */,
+				A95ECDBC29BEE43800EC2F35 /* RosterListView.swift in Sources */,
+				A95ECDBA29BEDDE400EC2F35 /* PayRate.swift in Sources */,
+				A95ECDB029BED85600EC2F35 /* Worker.swift in Sources */,
+				A95ECDB829BED8E300EC2F35 /* CSV Functions.swift in Sources */,
 				A95ECD8429BED82500EC2F35 /* IA2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
