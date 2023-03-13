@@ -12,6 +12,12 @@ struct RosterListView: View {
     @Binding var isLoggedIn:Bool
     @State var showAddShiftView = false
     
+    func myDateFormatter() -> DateFormatter {
+        var dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm E, d MMM y"
+        return dateFormatter
+    }
+    
     var body: some View {
         NavigationView{
             VStack{
@@ -50,12 +56,28 @@ struct RosterListView: View {
                     
                     if myData.roster.count > 1 {
                         ForEach(myData.roster){thisLine in
-                            HStack{
-                                Text("Start: \(thisLine.startTime)")
-                                Text("End: \(thisLine.endTime)")
-                                Spacer()
-                                Text("Break: \(thisLine.breakStart)")
-                                Text("[\(thisLine.breakDuration)]")
+                            VStack{
+                                HStack{
+                                    Text("START").font(.subheadline)
+                                    Spacer()
+                                    Text(myDateFormatter().string(from: thisLine.startTime))
+                                }
+                                HStack{
+                                    Text("END").font(.subheadline)
+                                    Spacer()
+                                    Text(myDateFormatter().string(from: thisLine.endTime))
+                                }
+                                HStack{
+                                    Text("BREAK").font(.subheadline)
+                                    Spacer()
+                                    Text(myDateFormatter().string(from: thisLine.breakStart))
+                                }
+                                HStack{
+                                    Text("BREAK DURATION").font(.subheadline)
+                                    Spacer()
+                                    Text("[\(thisLine.breakDuration)]")
+
+                                }
                             }
                         }
                     } else {
@@ -71,7 +93,7 @@ struct RosterListView: View {
             .padding()
         
             .fullScreenCover(isPresented: $showAddShiftView){
-                AddShiftView(showAddShiftView: $showAddShiftView)
+                AddShiftView()
             }
     }
 }

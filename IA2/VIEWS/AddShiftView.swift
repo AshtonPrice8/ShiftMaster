@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AddShiftView: View {
-    @Binding var showAddShiftView:Bool
     @EnvironmentObject var myData:MyDataModel
     @State var selectedPersonIndex = 0
     @State var selectedStartDate = Date()
@@ -24,7 +23,7 @@ struct AddShiftView: View {
             VStack{
                 HStack{
                     Button(action:{
-                        showAddShiftView = false
+                        dismissMe()
                     }){
                         Text("< Back to Roster View")
                     }.buttonStyle(.bordered)
@@ -88,6 +87,6 @@ struct AddShiftView: View {
 
 struct AddShiftView_Previews: PreviewProvider {
     static var previews: some View {
-        AddShiftView(showAddShiftView: .constant(true)).environmentObject(MyDataModel())
+        AddShiftView().environmentObject(MyDataModel())
     }
 }
